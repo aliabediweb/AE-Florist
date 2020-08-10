@@ -25,6 +25,10 @@ h2, h3, h4 {
 	color: white;
 }
 
+h2 {
+	font-size: 33px;
+}
+
 .bg-img {
 	background-image: url("sample_page_2_images/header_img.jpg");
 	margin-bottom: 20px;
@@ -144,32 +148,32 @@ mark {
 .home_img {
 	width: 60%;
 	display: block;
-	margin: 20px auto 20px auto;
+	margin: 50px auto 50px auto;
 }
 
 .shop_img {
 	width: 70%;
 	display: block;
-	margin: 20px auto 20px auto;
+	margin: 50px auto 50px auto;
 }
 
 .images {
 	width: 60%;
 	display: block;
-	margin: 10px auto 30px;
+	margin: 0px auto;
 }
 
 .caption {
 	text-align: center;
-	margin-top: 50px;
+	margin: 100px 0px 5px;
 	color: white;
-	font-size: 18px;
+	font-size: 25px;
 }
 
 .footer {
 	text-align: center;
 	color: white;
-	font-size: 0.7em;
+	font-size: 0.75em;
 }
 
 @media screen and (max-width: 900px) {
@@ -190,7 +194,7 @@ mark {
 		font-size: 15px;
 	}
 	.images {
-		width: 70%
+		width: 85%
 	}
 }
 
