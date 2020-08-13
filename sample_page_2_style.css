@@ -170,6 +170,11 @@ mark {
 	font-size: 25px;
 }
 
+hr {
+	margin-top: 35px;
+	border: 1.5px solid white;
+}
+
 .footer {
 	text-align: center;
 	color: white;
