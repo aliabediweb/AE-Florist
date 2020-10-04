@@ -16,8 +16,8 @@
    			<div class="topnav">
 			  	<a href="sample_page_2_index.html">Home</a>
 				<div class="subnav">
-					<a class="subnav_button">Flowers</a>
-						<div class="subnav_content">
+					<a onclick="openMenu1()" id="subnav_btn_1" class="subnav_button">Flowers</a>
+						<div class="subnav_content_1">
 							<a href="sample_page_2_roses_pg.html">Roses</a>
 							<a href="sample_page_2_tulips_pg.html">Tulips</a>
 							<a href="sample_page_2_sunflowers_pg.html">Sunflowers</a>
@@ -28,13 +28,13 @@
 						</div>
 				</div>
 				<div class="subnav">
-					<a class="subnav_button">Occasion</a>
+					<a onclick="openMenu2()" id="subnav_btn_2" class="subnav_button">Occasion</a>
 						<div class="subnav_content_2">
-							<a href="sample_page_2_love_pg.html">Love and Romance</a>
+							<a href="sample_page_2_love_pg.html">Love & Romance</a>
 							<a href="sample_page_2_wedding_pg.html">Wedding</a>
 							<a href="sample_page_2_anniversary_pg.html">Anniversary</a>
 							<a href="sample_page_2_congratulations_pg.html">Congrats</a>
-							<a href="sample_page_2_mothersday_pg.html">Mothers Day</a>
+							<a href="sample_page_2_mothersday_pg.html">Mother's Day</a>
 							<a href="sample_page_2_getwellsoon_pg.html">Get Well Soon</a>
 							<a href="sample_page_2_newbaby_pg.html">New Baby</a>
 						</div>
@@ -60,6 +60,67 @@
 	<hr/>
 	
 	<p class="footer">Copyright © Ali Abedi [May 2020]</p>
+
+
+	<script type="text/javascript">
+
+		function openMenu1() {
+			subnav_content_1_node = document.querySelector(".subnav_content_1");
+			subnav_content_2_node = document.querySelector(".subnav_content_2");
+			subnav_btn_1_node = document.getElementById("subnav_btn_1");
+			subnav_btn_2_node = document.getElementById("subnav_btn_2");
+
+			subnav_content_2_node.classList.remove("animate");
+			subnav_btn_2_node.innerHTML = "Occasion";
+			subnav_btn_2_node.style.backgroundColor = "#333";
+			subnav_btn_2_node.style.color = "#f2f2f2";
+			subnav_btn_2_node.style.fontFamily = "inital";
+
+			if (!subnav_content_1_node.classList.contains("animate")) {
+				subnav_content_1_node.classList.add("animate"); 
+				subnav_btn_1_node.innerHTML = "x";
+				subnav_btn_1_node.style.backgroundColor = "#6D6D6D";
+				subnav_btn_1_node.style.color = "black";
+				subnav_btn_1_node.style.fontFamily = "sans-serif";
+			
+			} else {
+				subnav_content_1_node.classList.remove("animate");
+				subnav_btn_1_node.innerHTML = "Flowers";
+				subnav_btn_1_node.style.backgroundColor = "#333";
+				subnav_btn_1_node.style.color = "#f2f2f2";
+				subnav_btn_1_node.style.fontFamily = "inital";
+			}
+		}
+
+		function openMenu2() {
+			subnav_content_1_node = document.querySelector(".subnav_content_1");
+			subnav_content_2_node = document.querySelector(".subnav_content_2");
+			subnav_btn_2_node = document.getElementById("subnav_btn_2");
+			subnav_btn_1_node = document.getElementById("subnav_btn_1");
+
+			subnav_content_1_node.classList.remove("animate");
+			subnav_btn_1_node.innerHTML = "Flowers";
+			subnav_btn_1_node.style.backgroundColor = "#333";
+			subnav_btn_1_node.style.color = "#f2f2f2";
+			subnav_btn_1_node.style.fontFamily = "inital";
+
+			if (!subnav_content_2_node.classList.contains("animate")) {
+				subnav_content_2_node.classList.add("animate"); 
+				subnav_btn_2_node.innerHTML = "x";
+				subnav_btn_2_node.style.backgroundColor = "#6D6D6D";
+				subnav_btn_2_node.style.color = "black";
+				subnav_btn_2_node.style.fontFamily = "sans-serif";
+				
+			} else {
+				subnav_content_2_node.classList.remove("animate");
+				subnav_btn_2_node.innerHTML = "Occasion";
+				subnav_btn_2_node.style.backgroundColor = "#333";
+				subnav_btn_2_node.style.color = "#f2f2f2";
+				subnav_btn_2_node.style.fontFamily = "inital";
+			}
+		}
+
+	</script>
 	
 </body>
 	
