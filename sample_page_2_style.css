@@ -48,6 +48,7 @@ h2 {
 .topnav {
     overflow: hidden;
     background-color: #333;
+    height: 50px;
 }
 
 .topnav a {
@@ -83,7 +84,7 @@ h2 {
 	cursor: pointer;
 }
 
-.subnav_content {
+.subnav_content_1 {
 	display: none;
 	position: absolute;
 	left: 25%;
@@ -100,7 +101,7 @@ h2 {
 	background-color: #6D6D6D;
 }
 
-.subnav_content a {
+.subnav_content_1 a {
 	font-size: 20px;
 	width: 100%;
 }
@@ -109,13 +110,15 @@ h2 {
 	width: 100%;
 }
 
-.subnav:hover .subnav_content {
-	cursor: pointer;
+.animate {
 	display: block;
+	animation-name: show;
+	animation-duration: 1s;
 }
-.subnav:hover .subnav_content_2{
-	cursor: pointer;
-	display: block;
+@keyframes show {
+  from {top: 300px;
+  	background-color: transparent;}
+  to {top: 50px;}
 }
 
 .welcome_text {
@@ -137,12 +140,6 @@ h2 {
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
-}
-
-mark {
-	background-color: #333;
-	color: white;
-	padding: 5px;
 }
 
 .home_img {
